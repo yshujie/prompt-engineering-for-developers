@@ -1,3 +1,4 @@
+import os
 import openai
 
 class OpenAI:
@@ -15,7 +16,7 @@ class OpenAI:
         # 设置 API Key
         self.apiKey = apiKey
         
-    def getCompletion(prompt, model='gpt-3.5-turbo') -> str:
+    def getCompletion(self, prompt, model='gpt-3.5-turbo') -> str:
         """
         prompt: 提示词
         model: 使用的模型，默认为 gpt-3.5-turbo
@@ -23,6 +24,9 @@ class OpenAI:
         messages = [
             {"role": "user", "content": prompt},
         ]
+        
+        print("OpenAI API Key: ", self.apiKey)
+        print("Prompt: ", prompt)
         
         response = openai.Completion.create(
             model=model,
