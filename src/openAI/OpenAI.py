@@ -17,7 +17,7 @@ class OpenAI:
         self.apiKey = apiKey
         print("OpenAI API Key: ", self.apiKey)
         
-    def getCompletion(self, prompt, model='gpt-3.5-turbo') -> str:
+    def getCompletion(self, prompt, temperature = 0, model='gpt-3.5-turbo') -> str:
         """
         prompt: 提示词
         model: 使用的模型，默认为 gpt-3.5-turbo
@@ -27,7 +27,7 @@ class OpenAI:
         response = openai.ChatCompletion.create(
             model=model,
             messages=messages,
-            temperature=0.1,
+            temperature=temperature,
         )
         
         return response.choices[0].message["content"]

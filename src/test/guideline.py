@@ -79,5 +79,5 @@ class Guideline:
         您的回答：
         """
         
-        return OpenAI().getCompletion(prompt = prompt)
+        return OpenAI().getCompletion(prompt = prompt, temperature=0.9)
         
