@@ -22,19 +22,15 @@ class OpenAI:
         prompt: 提示词
         model: 使用的模型，默认为 gpt-3.5-turbo
         """
-        messages = [
-            {"role": "user", "content": prompt}
-        ]
+        messages = [{"role": "user", "content": prompt}]
         
-        print("Prompt: ", prompt)
-        
-        response = openai.Completion.create(
+        response = openai.ChatCompletion.create(
             model=model,
             messages=messages,
-            temperature=0,
+            temperature=0.1,
         )
         
-        return response.choices[0].text
+        return response.choices[0].message["content"]
         
         
         
