@@ -10,6 +10,7 @@ class Guideline:
             ii. 若输入满足条件1，则执行操作1
             iii. 若输入满足条件2，则执行操作2
         """
+        pass
         
         prompt = f"""
         您将获得由三个引号扩起来的文本。\
@@ -33,6 +34,7 @@ class Guideline:
         案例2: 通过 Prompt 对文本进行加工，要求 LLM 对输出进行格式化
         此案例练习使用 Prompt 要求 LLM 输出 JSON 格式的数据。
         """
+        pass
         
         prompt = f"""
         您将获得由三个引号扩起来的文本。\
@@ -55,6 +57,27 @@ class Guideline:
         
         您获得的文本如下：
         \"\"\"{text}\"\"\"
+        """     
+        return OpenAI().getCompletion(prompt = prompt)
+    
+    def text3(text):
         """ 
+        案例3：通过 Prompt 对文本进行加工，给 LLM 提供示例。
+        """
+        pass
+    
+        prompt = f"""
+        您将获得由三个引号扩起来的文本，您的任务是以一致的风格回答问题。
+        
+        以下是一个示例：
+        <孩子>：请教我耐心。
+        <祖父母>：挖出最深峡谷的河流源于一处不起眼的泉眼；最宏伟的交响乐从单一的音符开始；最复杂的挂毯以一根孤独的线开始编织。
+        ------
+        
+        您需要回答的问题：
+        <孩子>：\"\"\"{text}\"\"\"
+        您的回答：
+        """
         
         return OpenAI().getCompletion(prompt = prompt)
+        
