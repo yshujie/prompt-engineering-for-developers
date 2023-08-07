@@ -10,7 +10,7 @@ def testGuideline():
     就这样，您可以享受一杯美味的茶了。
     """
     
-    response = Guideline.text1(text)
+    response = Guideline.text2(text)
     
     print("Response:")
     print(response)
