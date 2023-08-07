@@ -77,7 +77,53 @@ class Guideline:
         您需要回答的问题：
         <孩子>：\"\"\"{text}\"\"\"
         您的回答：
-        """
-        
+        """    
         return OpenAI().getCompletion(prompt = prompt, temperature=0.9)
         
+    def text4(text):
+        """
+        案例4：通过 Prompt 提示 LLM 对文本进行加工。
+        给模型时间去思考，指定完成任务所需的步骤。
+        """
+        pass
+    
+        prompt = f"""
+        执行一下操作：
+        1. 用一句话概括下面用三个反括号括起来的文本
+        2. 将摘要翻译为法语
+        3. 在法语摘要中列出每个人名
+        4. 输出一个 JSON 对象，其中包含以下键：French_summary, num_names
+        
+        请用换行符分割您的答案。
+        
+        Text:
+        ```{text}```
+        """
+        
+        return OpenAI().getCompletion(prompt = prompt, temperature=0)
+    
+    def text5(text):
+        """
+        案例4：通过 Prompt 提示 LLM 对文本进行加工。
+        给模型时间去思考，指定完成任务所需的步骤。     
+        """
+        pass 
+        
+        prompt = f"""
+        1. 用一句话概括下面用<>括起来的文本
+        2. 将摘要翻译为英语
+        3. 在英语摘要中列出每个人名
+        4. 输出一个 JSON 对象，其中包含以下键：English_summary, num_names 
+        
+        请使用以下格式：
+        文本：<要总结的文本>
+        摘要：<摘要>
+        翻译：<摘要的翻译>
+        名称:<英文找药中的名称列表>
+        输出 JSON：<带有 English_summary 和 num_names 的 JSON>
+        
+        Text：<{text}>
+        
+        您的回答：
+        """
+        return OpenAI().getCompletion(prompt = prompt, temperature=0)
