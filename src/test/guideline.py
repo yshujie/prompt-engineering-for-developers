@@ -1,4 +1,4 @@
-from src.openAI.OpenAI import OpenAI
+from openAI.OpenAI import OpenAI
 
 class Guideline:
     def text1(text):
@@ -26,7 +26,7 @@ class Guideline:
         \"\"\"{text}\"\"\"
         """
 
-        return OpenAI.getCompletion(prompt)
+        return OpenAI().getCompletion(prompt = prompt)
         
         
         

@@ -1,4 +1,4 @@
-from src.test.guideline import Guideline
+from test.guideline import Guideline
 
 def testGuideline():
     text = f"""
