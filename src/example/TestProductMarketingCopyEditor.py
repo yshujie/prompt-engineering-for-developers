@@ -69,3 +69,14 @@ class TestProductMarketingCopyEditor:
 
         print("limitSummary: ", limitSummary)
         print("len(limitSummary): ", len(limitSummary))
+
+    def testSummaryWithUsageScenarios(self):
+        """
+        测试 -- 对产品说明书进行总结，并限制输出的字数、说明使用场景
+        """
+        pass
+
+        summaryWithUsageScenarios = self._productMarketingCopyEditor.summaryWithUsageScenarios()
+
+        print("summaryWithUsageScenarios: ", summaryWithUsageScenarios)
+        print("len(summaryWithUsageScenarios): ", len(summaryWithUsageScenarios))
