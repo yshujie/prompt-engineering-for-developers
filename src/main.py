@@ -1,10 +1,7 @@
-from test.guideline import Guideline
-
-def testGuideline():    
-    response = Guideline.text6()
-    
-    print("Response:")
-    print(response)
+from example.TestProductMarketingCopyEditor import TextProductMarketingCopyEditor
 
 if __name__ == '__main__':
-    testGuideline()
+    editor = TextProductMarketingCopyEditor()
+    
+    # 测试总结
+    editor.testSummary()
