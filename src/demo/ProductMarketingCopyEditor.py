@@ -55,6 +55,8 @@ class ProductMarketingCopyEditor:
         该描述面向家具零售商，因此应具有技术性质，并侧重于产品的材料构造。
         最多使用 50 个字。
         
+        在描述末尾，包括技术规格中每个7个字符的产品ID。
+        
         技术说明书：
         ```{self._productManual}```
         """
