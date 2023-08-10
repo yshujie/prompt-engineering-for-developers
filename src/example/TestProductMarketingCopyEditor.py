@@ -1,4 +1,4 @@
-from demo import ProductMarketingCopyEditor
+from demo.productMarketingCopyEditor import ProductMarketingCopyEditor
 
 # 定义产品说明书常量
 PRODUCT_MANUAL = """
@@ -46,9 +46,8 @@ PRODUCT_MANUAL = """
 
 class TestProductMarketingCopyEditor:
     def __init__(self):
-        productManual = PRODUCT_MANUAL
-        productMarketingCopyEditor = ProductMarketingCopyEditor(productManual)
-        
+        self._productManual = PRODUCT_MANUAL
+        self._productMarketingCopyEditor = ProductMarketingCopyEditor(self._productManual)
 
     def testSummary(self):
         """
@@ -56,8 +55,7 @@ class TestProductMarketingCopyEditor:
         """
         pass
 
-        productMarketingCopyEditor = ProductMarketingCopyEditor(self.productManual)
-        summary = productMarketingCopyEditor.summary()
+        summary = self._productMarketingCopyEditor.summary()
 
         print("summary: ", summary)
-        
+    

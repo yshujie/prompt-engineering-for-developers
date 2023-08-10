@@ -1,5 +1,5 @@
 
-from openAI import OpenAI
+from openAI.OpenAI import OpenAI
 
 
 class ProductMarketingCopyEditor:
@@ -24,4 +24,3 @@ class ProductMarketingCopyEditor:
         """
 
         return OpenAI().getCompletion(prompt = prompt, temperature=0)
-

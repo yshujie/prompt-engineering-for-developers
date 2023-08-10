@@ -1,7 +1,7 @@
-from example.TestProductMarketingCopyEditor import TextProductMarketingCopyEditor
+from example.testProductMarketingCopyEditor import TestProductMarketingCopyEditor
 
 if __name__ == '__main__':
-    editor = TextProductMarketingCopyEditor()
+    editor = TestProductMarketingCopyEditor()
     
     # 测试总结
     editor.testSummary()
