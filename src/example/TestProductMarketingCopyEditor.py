@@ -59,3 +59,13 @@ class TestProductMarketingCopyEditor:
 
         print("summary: ", summary)
     
+    def testLimitSummary(self):
+        """
+        测试 -- 对产品说明书进行总结，并限制输出的字数
+        """
+        pass
+
+        limitSummary = self._productMarketingCopyEditor.limitSummary()
+
+        print("limitSummary: ", limitSummary)
+        print("len(limitSummary): ", len(limitSummary))
