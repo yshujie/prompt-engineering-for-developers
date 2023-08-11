@@ -1,4 +1,4 @@
-from demo.productMarketingCopyEditor import ProductMarketingCopyEditor
+from example.productMarketingCopyEditor import ProductMarketingCopyEditor
 
 # 定义产品说明书常量
 PRODUCT_MANUAL = """
