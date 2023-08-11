@@ -1,4 +1,4 @@
-from example.testProductMarketingCopyEditor import TestProductMarketingCopyEditor
+from test.testProductMarketingCopyEditor import TestProductMarketingCopyEditor
 
 if __name__ == '__main__':
     editor = TestProductMarketingCopyEditor()
