@@ -1,7 +1,4 @@
-from test.testProductMarketingCopyEditor import TestProductMarketingCopyEditor
+from test.testInferring import TestInferring
 
 if __name__ == '__main__':
-    editor = TestProductMarketingCopyEditor()
-    
-    # 测试总结
-    editor.testSummaryWithTable()
+    TestInferring().test()
