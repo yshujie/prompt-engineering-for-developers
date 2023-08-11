@@ -1,6 +1,10 @@
 from example.inferring import Interring
 
 class TestInferring:
+    """
+    推理模块的测试类
+    """
+    pass
     
     def __init__(self):
         self._interring = Interring()
@@ -11,8 +15,9 @@ class TestInferring:
         """
         pass
     
+        # 测试情感识别
+        self._testEmotionRecognition()
          
-    
     def _testEmotionRecognition(self):
         review = """
         我需要一盏漂亮的卧室灯，这款灯具有额外的储物功能，价格也不算太高。\
@@ -21,6 +26,8 @@ class TestInferring:
         在我看来，Lumina 是一家非常关心顾客和产品的优秀公司！
         """
         
-        self._interring.emotionRecognition(review)
+        print("情感识别测试：")
+        
+        self._interring.emotionRecognition2(review)
         
         
